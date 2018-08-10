@@ -7,8 +7,8 @@ describe Note do
   end
 end
 
-describe Notebook do
 
+describe Notebook do
   # setup test instance to use
   test_notebook = Notebook.new
   test_notebook.add_note("Title1", "Body1")
@@ -23,6 +23,7 @@ describe Notebook do
     expect(test_notebook.note_book).to eq([{"Title1" => "Body1"}, {"Title2" => "Body2"}])
   end
 end
+
 
 describe NotePrint do
   test_notebook = Notebook.new

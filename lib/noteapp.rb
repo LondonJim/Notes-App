@@ -6,15 +6,14 @@ class Notebook
   end
 
   def add_note(title, body)
-    new_note = Note.new(title, body)
-    @note_book << new_note.note
+    @note_book << Note.new(title,body).note
   end
 
   def printer
-    print_out = NotePrint.new(@note_book)
-    print_out.options
+    NotePrint.new(@note_book).options
   end
 end
+
 
 class Note
   attr_reader :note
@@ -24,6 +23,7 @@ class Note
     @note[title] = body
   end
 end
+
 
 class NotePrint
   def initialize(note_book)
