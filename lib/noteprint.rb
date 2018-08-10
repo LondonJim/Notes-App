@@ -1,30 +1,3 @@
-class Notebook
-  attr_reader :note_book
-
-  def initialize
-    @note_book = []
-  end
-
-  def add_note(title, body)
-    @note_book << Note.new(title,body).note
-  end
-
-  def printer
-    NotePrint.new(@note_book).options
-  end
-end
-
-
-class Note
-  attr_reader :note
-
-  def initialize(title, body)
-    @note = Hash.new
-    @note[title] = body
-  end
-end
-
-
 class NotePrint
   def initialize(note_book)
     @note_book = note_book
