@@ -10,6 +10,7 @@ class NotePrint
     print_note(view_note)
   end
 
+  private
   def print_list
     @note_book.each_with_index do |note, index|
     puts "#{index+1}: #{note.keys[0]}"
