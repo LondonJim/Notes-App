@@ -48,10 +48,3 @@ class NotePrint
     puts @note_book[view_note].values[0]
   end
 end
-
-
-# new_notebook = Notebook.new
-# new_notebook.add_note("Today", "This happened today")
-# new_notebook.add_note("Tomorrow", "This happened yesterday")
-#
-# new_notebook.printer

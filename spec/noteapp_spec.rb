@@ -30,9 +30,9 @@ describe NotePrint do
   test_notebook.add_note("Title2", "Body2")
 
   it 'prints list to terminal' do
+    #allow($stdout).to receive(:write)
     test_print = NotePrint.new([{"Title1" => "Body1"}, {"Title2" => "Body2"}])
-    allow(test_print).to receive(:gets).and_return("1\n")
-    test_print.options
-
+    allow(test_print).to receive(:gets).and_return("1")
+    expect{test_print.options}.to output("0: Title1\n1: Title2\nEnter number of note to view\nTitle2\nBody2\n").to_stdout
   end
 end
