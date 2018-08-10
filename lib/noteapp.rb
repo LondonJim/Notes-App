@@ -39,12 +39,12 @@ class NotePrint
 
   def print_list
     @note_book.each_with_index do |note, index|
-    puts "#{index}: #{note.keys[0]}"
+    puts "#{index+1}: #{note.keys[0]}"
     end
   end
 
   def print_note(view_note)
-    puts @note_book[view_note].keys[0]
-    puts @note_book[view_note].values[0]
+    puts @note_book[view_note-1].keys[0]
+    puts @note_book[view_note-1].values[0]
   end
 end
