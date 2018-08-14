@@ -9,23 +9,10 @@ Written as a project to achieve the goal of using TDD
 - pick a note and see its title and body.
 
 ### Files
-```
-./lib/notebook.rb
-```
-```
-./lib/note.rb
-```
-```
-./lib/noteprint.rb
-```
+
+    ./lib/notebook.rb
+
 
 ### Rspec Testing
-```
-./spec/notebook_spec.rb
-```
-```
-./spec/note_spec.rb
-```
-```
-./spec/noteprint_spec.rb
-```
+
+    ./spec/notebook_spec.rb
