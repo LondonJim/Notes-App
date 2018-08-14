@@ -1,7 +1,9 @@
-require 'note'
-require 'noteprint'
+require_relative 'noteprint'
 
 class Notebook
+
+  include NotePrint
+
   attr_reader :note_book
 
   def initialize
@@ -9,10 +11,10 @@ class Notebook
   end
 
   def add_note(title, body)
-    @note_book << Note.new(title,body).note
+    @note_book << { title => body }
   end
 
-  def printer
-    NotePrint.new(@note_book).options
+  def note_print
+    @note_book.print_options
   end
 end
