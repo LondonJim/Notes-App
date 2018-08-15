@@ -1,5 +1,3 @@
-require_relative 'noteprint'
-
 class Notebook
 
   attr_reader :note_book
